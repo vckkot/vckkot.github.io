@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh-CN">
+<html class="theme-next pisces use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -74,6 +74,8 @@
 
 
 
+  <link rel="alternate" href="/rss2.xml" title="SkyL的博客" type="application/atom+xml" />
+
 
 
 
@@ -97,7 +99,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Pisces',
     version: '5.1.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -201,12 +203,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
-            About
+            Categories
           </a>
         </li>
       
@@ -221,22 +223,22 @@
         </li>
       
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            Categories
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
           </a>
         </li>
       
@@ -312,7 +314,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="vckkot">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/upload/image/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -355,6 +357,17 @@
           
 
           
+          
+             <span id="/2018/10/18/评论测试/" class="leancloud_visitors" data-flag-title="评论测试">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
 
           
@@ -431,7 +444,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="vckkot">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/upload/image/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -475,6 +488,17 @@
 
           
           
+             <span id="/2018/10/17/JDBC/" class="leancloud_visitors" data-flag-title="JDBC">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
           
 
@@ -496,8 +520,7 @@
 
       
         
-          
-            <p>#JDBC</p>
+          <p>#JDBC</p>
 <p>@(Java)</p>
 <hr>
 <p>##ResultSetMetaData<br>[toc]</p>
@@ -509,248 +532,13 @@
 </blockquote>
 </li>
 </ul>
-<hr>
-<p>###2.由于jdbc自动提交事务,所以需要手动关闭</p>
-<blockquote>
-<p>案例演示<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line">public class Demo2 &#123;</span><br><span class="line">/**</span><br><span class="line"> * 由于JDBC自动事务提交</span><br><span class="line"> * 1.关闭自动提交conn.setAutoCommit(false);</span><br><span class="line"> * 2.try的最后部分手动提交conn.commit();</span><br><span class="line"> * 3.由于一出现错误,就会运行catch块</span><br><span class="line"> *   在catch中conn.rollback();</span><br><span class="line"> * 4.封装回滚方法</span><br><span class="line"> * @param args</span><br><span class="line"> */</span><br><span class="line">    static String sql1=&quot;update bal set&quot;</span><br><span class="line">            + &quot; money=money+? where id=?&quot;;</span><br><span class="line">    static String sql2=&quot;select money from bal where id=?&quot;;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        pay(2, 4, 1000);</span><br><span class="line">    &#125;</span><br><span class="line">    public static void pay(int from,int to,double money)&#123;</span><br><span class="line">        Connection conn=null;</span><br><span class="line">        try &#123;</span><br><span class="line">            conn=DBUtiles.getConnection();</span><br><span class="line">            //关闭自动commit</span><br><span class="line">            conn.setAutoCommit(false);</span><br><span class="line">            PreparedStatement ps=conn.prepareStatement(sql1);</span><br><span class="line">            /**</span><br><span class="line">             * 业务模块---a--&gt;b 打1000</span><br><span class="line">             * create table bal(</span><br><span class="line">             * id int,</span><br><span class="line">             * name varchar(20),</span><br><span class="line">             * money double(8,2)</span><br><span class="line">             * )</span><br><span class="line">             */</span><br><span class="line">            //a-1000</span><br><span class="line">            ps.setDouble(1, -money);</span><br><span class="line">            ps.setInt(2, from);</span><br><span class="line">            int n=ps.executeUpdate();</span><br><span class="line">            //更新失败</span><br><span class="line">            if (n!=1) &#123;</span><br><span class="line">                throw new Exception(&quot;减钱失败&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">            //b+1000</span><br><span class="line">            ps.setDouble(1, money);</span><br><span class="line">            ps.setInt(2, to);</span><br><span class="line">            n=ps.executeUpdate();</span><br><span class="line">            if (n!=1) &#123;</span><br><span class="line">                throw new Exception(&quot;加钱失败&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">            ps.close();</span><br><span class="line">            //检查a有没有1000</span><br><span class="line">            ps=conn.prepareStatement(sql2);</span><br><span class="line">            ps.setInt(1, from);</span><br><span class="line">            ResultSet rs=ps.executeQuery();</span><br><span class="line">            while (rs.next()) &#123;</span><br><span class="line">                double bal=rs.getDouble(1);</span><br><span class="line">                if (bal&lt;0) &#123;</span><br><span class="line">                    throw new Exception(&quot;余额不足&quot;);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            //手动提交</span><br><span class="line">            conn.commit();</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">            DBUtiles.rollback(conn);</span><br><span class="line">        &#125;finally &#123;</span><br><span class="line">            DBUtiles.closeConnection(conn);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<hr>
-<p>###批量更新</p>
-<ul>
-<li><p>把多条sql存入<code>Statement</code>对象的缓存,一次性发送给DB执行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Statement sta=conn.createStatement();</span><br><span class="line">//          sta.addBatch(sql1);</span><br><span class="line">//          sta.addBatch(sql2);         </span><br><span class="line">//          int[] arr=sta.executeBatch();</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>创建一个执行计划,把多条参数存入<code>PreParedStatement</code>对象缓存中,一次性发送给DB执行</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">PreparedStatement ps=conn.prepareStatement(sql6);           </span><br><span class="line">ps.setInt(1, 1);</span><br><span class="line">ps.setString(2, &quot;lili&quot;);</span><br><span class="line">ps.addBatch();          </span><br><span class="line">int[] arr=ps.executeBatch();</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>内存溢出OutOfMemory</p>
-</blockquote>
-<p>###获取自动生成的主键</p>
-<ul>
-<li><p><code>String[] colNames={&quot;id&quot;};</code> 自动生成值的列的列名</p>
-</li>
-<li><p><code>PreparedStatement ps =conn.prepareStatement(sql1, colNames);</code>必须与上面的命令一起使用 <code>ps.getGeneratedKeys()</code></p>
-</li>
-</ul>
-<blockquote>
-<p>案例演示</p>
-</blockquote>
-<pre><code>    public static void main(String[] args) {
-        String sql1=&quot;create table &quot;
-                + &quot;log1 (id int ,msg varchar(20))&quot;;
-        String sql2=&quot;create table &quot;
-                + &quot;log2 (id int ,msg varchar(20))&quot;;
-        String sql3=&quot;create table &quot;
-                + &quot;log3 (id int ,msg varchar(20))&quot;;
-        String sql4=&quot;create table &quot;
-                + &quot;log4 (id int ,msg varchar(20))&quot;;
-        String sql5=&quot;create table &quot;
-                + &quot;log5 (id int ,msg varchar(20))&quot;;
-        String sql6=&quot;insert into log1 values &quot;
-                + &quot;(?,?)&quot;;
-        String sql7=&quot;insert into log2 values &quot;
-                + &quot;(?,?)&quot;;
-        //获得连接对象
-        Connection conn=null;
-        try {
-            conn=DBUtiles.getConnection();
-            //批量更新的第一种方法
-            //把多个sql语句存入sta对象的缓存中
-//          Statement sta=conn.createStatement();
-//          sta.addBatch(sql1);
-//          sta.addBatch(sql2);
-//          sta.addBatch(sql3);
-//          sta.addBatch(sql4);
-//          sta.addBatch(sql5);
-            //一次性发送给数据库执行
-            //返回值 &gt;=0---成功,有结果
-            //返回值-2----成功,没有结果
-            //返回值-3----不成功
-//          int[] arr=sta.executeBatch();
-//          System.out.println(Arrays.toString(arr));
-
-            //第二中批量更新的方式
-            //使用ps固定一个执行计划
-            //把一堆参数存入ps的缓存
-            //一次性发送给DB,进行处理
-//          PreparedStatement ps=conn.prepareStatement(sql6);
-//          
-//          ps.setInt(1, 1);
-//          ps.setString(2, &quot;lili&quot;);
-//          ps.addBatch();
-//          
-//          ps.setInt(1, 2);
-//          ps.setString(2, &quot;lucy&quot;);
-//          ps.addBatch();
-//          
-//          int[] arr=ps.executeBatch();
-//          System.out.println(Arrays.toString(arr));
-        PreparedStatement ps =conn.prepareStatement(sql7);
-        for (int i = 1; i &lt; 100; i++) {
-            ps.setInt(1, i);
-            ps.setString(2, &quot;test&quot;+i);
-            ps.addBatch();
-            if (i%8==0) {//97.98.99
-                ps.executeBatch();
-            }
-        }
-            ps.executeBatch();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }finally {
-            DBUtiles.closeConnection(conn);
-        }
-    }
-</code></pre><p>##DAO</p>
-<ul>
-<li><p>DAO作为数据访问层,把业务逻辑层和数据库分割开来</p>
-</li>
-<li><p>业务逻辑层需要数据,就跟DAO要</p>
-</li>
-<li><p>业务逻辑层要保存数据,就交给DAO,让DAO去保存</p>
-</li>
-<li><p>业务逻辑层不关系数据如何获取,如何保存,全部都由DAO负责</p>
-<blockquote>
-<p>案例演示</p>
-</blockquote>
-<pre><code>  public class UserDAO1 implements UserDAO{
-    private static final String search_by_id
-        =&quot;select * from user_1 where id=?&quot;;
-    private static final String search_all
-        =&quot;select * from user_1&quot;;
-    private static final String update_user_password
-    =&quot;update user_1 set name=?,password=? where id=?&quot;;
-    private static final String insert_user
-    =&quot;insert into user_1 values(null,?,?,?)&quot;;
-    public User findUserById(int id) {
-        Connection conn=null;
-        try {
-            conn=DBUtiles.getConnection();
-            PreparedStatement ps=conn.prepareStatement(search_by_id);
-            ps.setInt(1, id);
-            ResultSet rs=ps.executeQuery();
-            int i=0;
-            String name=null;
-            String pwd=null;
-            int age=0;
-            while(rs.next()){
-                i=rs.getInt(1);
-                name=rs.getString(2);
-                pwd=rs.getString(3);
-                age=rs.getInt(4);
-            }
-            return new User(i, name, pwd, age);
-        } catch (Exception e) {
-            e.printStackTrace();
-            DBUtiles.rollback(conn);
-        }finally{
-            DBUtiles.closeConnection(conn);
-        }
-        return null;
-    }
-
-    public List&lt;User&gt; findAllUser() {
-        Connection conn=null;
-        try {
-            conn=DBUtiles.getConnection();
-            conn.setAutoCommit(false);
-            Statement sta=conn.createStatement();
-            ResultSet rs=sta.executeQuery(search_all);
-            List&lt;User&gt; list=new ArrayList&lt;User&gt;();
-            while (rs.next()) {
-                int i=rs.getInt(1);
-                String name=rs.getString(2);
-                String pwd=rs.getString(3);
-                int age=rs.getInt(4);
-                User user=new User(i, name, pwd, age);
-                list.add(user);
-            }
-            conn.commit();
-            return list;
-        } catch (Exception e) {
-            e.printStackTrace();
-            DBUtiles.rollback(conn);
-        }finally {
-            DBUtiles.closeConnection(conn);
-        }
-        return null;
-    }
-
-    public int updateUser(User user) {
-        Connection conn=null;
-        try {
-            conn=DBUtiles.getConnection();
-            PreparedStatement ps=conn.prepareStatement(update_user_password);
-            ps.setString(1, user.getName());
-            ps.setString(2, user.getPwd());
-            ps.setInt(3, user.getId());
-            int n=ps.executeUpdate();
-            if (n!=1) {
-                throw new Exception(&quot;修改失败&quot;);
-            }
-            ps.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-            DBUtiles.rollback(conn);
-        }finally {
-            DBUtiles.closeConnection(conn);
-        }
-        return 0;
-    }
-
-    public int saveUser(User user) {
-        Connection conn=null;
-        try {
-            conn=DBUtiles.getConnection();
-            PreparedStatement ps=conn.prepareStatement(insert_user);
-            ps.setString(1, user.getName());
-            ps.setString(2, user.getPwd());
-            ps.setInt(3, user.getAge());
-            int n=ps.executeUpdate();
-            if (n!=1) {
-                throw new Exception(&quot;插入失败&quot;);
-            }
-            ps.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-            DBUtiles.rollback(conn);
-        }finally {
-            DBUtiles.closeConnection(conn);
-        }
-        return 0;
-    }
-
-}
-</code></pre></li>
-</ul>
-<hr>
-<blockquote>
-<p>测试类</p>
-</blockquote>
-<pre><code>    public static void main(String[] args) {
-        //数据---&gt;数据库读取出来的
-        //验证dao的findUserById方法
-        UserDAO dao=new UserDAO1();
-        //验证dao的findall
-        //List&lt;User&gt; list=dao.findAllUser();
-        //for (int i = 0; i &lt; list.size(); i++) {
-        //System.out.println(list.get(i).getId());
-        //}
-
-        //验证dao的修改方法
-        //User user=new User(2, &quot;xiongda&quot;, &quot;321&quot;, 18);
-        //dao.updateUser(user);
-
-        //验证dao的插入方法
-        User user=new User(1232, &quot;xiongda&quot;, &quot;321&quot;, 18);
-        dao.saveUser(user);
-
-}
-</code></pre><hr>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/10/17/JDBC/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -802,7 +590,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="vckkot">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/upload/image/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -845,6 +633,17 @@
           
 
           
+          
+             <span id="/2018/10/17/hello-world/" class="leancloud_visitors" data-flag-title="Hello World">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
 
           
@@ -947,6 +746,10 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
+              <img class="site-author-image" itemprop="image"
+                src="/upload/image/avatar.jpg"
+                alt="vckkot" />
+            
               <p class="site-author-name" itemprop="name">vckkot</p>
               <p class="site-description motion-element" itemprop="description">人静而后安，安而能后定，定而能后慧，慧而能后悟，悟而能后得。</p>
           </div>
@@ -970,6 +773,13 @@
 
           </nav>
 
+          
+            <div class="feed-link motion-element">
+              <a href="/rss2.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
           
 
           
@@ -1017,7 +827,7 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
 
 
 
@@ -1116,6 +926,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
 
   
 
@@ -1483,6 +1300,113 @@
 
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("Gf4ErfivqiFLoA9yn6igzAsS-gzGzoHsz", "lQabLRSMqq2CpnBpoHAzx30w");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 
