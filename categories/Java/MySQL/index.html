@@ -12,6 +12,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
 
+<script>
+    (function () {
+        if ('') {
+            if (prompt('请输入文章密码') !== '') {
+                alert('密码错误！');
+                if (history.length === 1) {
+                    location.replace("http://xxxxxxx.xxx"); // 这里替换成你的首页
+                } else {
+                    history.back();
+                }
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -74,7 +89,7 @@
 
 
 
-  <link rel="alternate" href="/rss2.xml" title="SkyL的博客" type="application/atom+xml" />
+  <link rel="alternate" href="/rss2.xml" title="SkyL Blog" type="application/atom+xml" />
 
 
 
@@ -83,13 +98,13 @@
 
 <meta name="description" content="人静而后安，安而能后定，定而能后慧，慧而能后悟，悟而能后得。">
 <meta property="og:type" content="website">
-<meta property="og:title" content="SkyL的博客">
+<meta property="og:title" content="SkyL Blog">
 <meta property="og:url" content="https://vckkot.github.io/categories/Java/MySQL/index.html">
-<meta property="og:site_name" content="SkyL的博客">
+<meta property="og:site_name" content="SkyL Blog">
 <meta property="og:description" content="人静而后安，安而能后定，定而能后慧，慧而能后悟，悟而能后得。">
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SkyL的博客">
+<meta name="twitter:title" content="SkyL Blog">
 <meta name="twitter:description" content="人静而后安，安而能后定，定而能后慧，慧而能后悟，悟而能后得。">
 
 
@@ -126,7 +141,7 @@
 
 
 
-  <title>Category: MySQL | SkyL的博客</title>
+  <title>Category: MySQL | SkyL Blog</title>
   
 
 
@@ -166,7 +181,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">SkyL的博客</span>
+        <span class="site-title">SkyL Blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -389,7 +404,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -446,7 +461,9 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        
+
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -454,6 +471,9 @@
 
   
 </div>
+
+
+
 
 
   <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
